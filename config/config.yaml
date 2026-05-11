@@ -114,7 +114,7 @@ rss:
       url: "https://finance.yahoo.com/news/rssindex"
       
     - id: "reuters_business_finance"
-      name: "Reuters Business and Finance"
+      name: "路透社财经"
       url: "https://feeds.reuters.com/reuters/businessNews"
       
     - id: "economist_print_edition"
@@ -123,7 +123,7 @@ rss:
       
     - id: "xinhuanet_finance"
       name: "新华网财经"
-      url: "http://rss.xinhuanet.com/rss/fortune.xml"
+      url: "https://www.jjckb.cn/yw.htm"
 
     # TOOL 1: 国际风向标
     - id: "wired"
