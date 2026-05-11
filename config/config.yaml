@@ -55,10 +55,6 @@ schedule:
 platforms:
   enabled: true                         # 是否启用热榜平台抓取
   sources:
-    - id: "toutiao"
-      name: "今日头条"
-    - id: "baidu"
-      name: "百度热搜"
     - id: "wallstreetcn-hot"
       name: "华尔街见闻"
     - id: "thepaper"
@@ -69,14 +65,6 @@ platforms:
       name: "财联社热门"
     - id: "ifeng"
       name: "凤凰网"
-    - id: "tieba"
-      name: "贴吧"
-    - id: "weibo"
-      name: "微博"
-    - id: "douyin"
-      name: "抖音"
-    - id: "zhihu"
-      name: "知乎"
 
 
 
@@ -126,6 +114,45 @@ rss:
     - id: "yahoo-finance"
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
+      
+    - id: "reuters_business_finance"
+      name: "Reuters Business and Finance"
+      url: "https://feeds.reuters.com/reuters/businessNews"
+      
+    - id: "economist_print_edition"
+      name: "经济学人 (印刷版)"
+      url: "https://rsshub.app/economist/print-edition"
+      
+    - id: "xinhuanet_finance"
+      name: "新华网财经"
+      url: "http://rss.xinhuanet.com/rss/fortune.xml"
+
+    # TOOL 1: 国际风向标
+    - id: "wired"
+      name: "Wired"
+      url: "https://rsshub.app/wired"
+      
+    - id: "techcrunch"
+      name: "TechCrunch"
+      url: "https://rsshub.app/techcrunch"
+      
+    - id: "mit-tech-review"
+      name: "MIT Technology Review"
+      url: "https://rsshub.app/mit/technologyreview"
+      
+    # TOOL 2: 硬核学术与开发者社区
+    - id: "openai-blog"
+      name: "OpenAI Blog"
+      url: "https://newsblur.com/site/.../openai"      # 使用特定RSS服务URL
+    - id: "hacker-news-top"
+      name: "Hacker News (Top)"
+      url: "https://rsshub.app/hackernews"
+    
+    # TOOL 3: 本土科技视角
+    - id: "jiqizhixin"
+      name: "机器之心"
+      url: "https://www.jiqizhixin.com/rss"
+      
 
     # 自定义源示例
     # - id: "custom-feed"
@@ -492,7 +519,7 @@ ai_analysis:
   #   - 推送 incremental（避免重复），AI 分析 current（看当前榜单变化）
   #   - 推送 current（实时热点），AI 分析 daily（全天总结）
   #
-  mode: "daily"
+  mode: "follow_report"
 
   # 分析内容配置
   max_news_for_analysis: 150        # 热榜+RSS 合计参与分析的新闻数量上限（控制成本关键项）
